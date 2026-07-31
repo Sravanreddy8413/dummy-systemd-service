@@ -1,0 +1,12 @@
+[Unit]
+Description=Dummy Background Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/dummy-service/dummy.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
